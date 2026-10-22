@@ -38,6 +38,13 @@
   .nabi .hero { margin-top: 32px; border-radius: 6px; overflow: hidden; }
   .nabi .pair { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; margin-top: 12px; }
   .nabi .pair img { border-radius: 6px; width: 100%; height: 100%; object-fit: cover; }
+  .shotgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .shotgrid figure { margin: 0; }
+  .shotgrid img { width: 100%; aspect-ratio: 16 / 10; object-fit: contain; border-radius: 6px; }
+  .shotgrid figcaption { font-size: 13px; opacity: .7; margin-top: 6px; }
+  .nabi .shotgrid img { background: #0f0e14; }
+  .mon .shotgrid img { object-fit: cover; object-position: top; border: 3px solid #4b4b4b; border-radius: 10px; aspect-ratio: 74 / 80; }
+  .peach .evidence { margin-top: 20px; max-width: 360px; border-radius: 12px; }
   .nabi .play { background: #f2b544; color: #15131b; border-radius: 4px; }
   .nabi q { color: #f2b544; }
 
@@ -80,9 +87,11 @@
     <div class="info">환경교육 방탈출 웹게임 · 2026.03–06 · 5인 팀 · p5.js</div>
 
     <img class="hero" src="images/nabi_title.jpg" alt="나비효과 타이틀 화면">
-    <div class="pair">
-      <img src="images/nabi_room.jpg" alt="게임 속 방 화면">
-      <img src="images/nabi_end.jpg" alt="엔딩 장면">
+    <div class="shotgrid">
+      <figure><img src="images/nabi_recycle.jpg" alt="분리수거 미니게임"><figcaption>분리수거: 떨어지는 쓰레기를 알맞은 통으로</figcaption></figure>
+      <figure><img src="images/nabi_sink.jpg" alt="수도꼭지 미니게임"><figcaption>싱크대: 타이밍에 맞춰 수도꼭지 잠그기</figcaption></figure>
+      <figure><img src="images/nabi_tumbler.jpg" alt="텀블러 짝 찾기 미니게임"><figcaption>텀블러: 플레이테스트 후 추가한 짝 찾기</figcaption></figure>
+      <figure><img src="images/nabi_computer.jpg" alt="창 닫기 미니게임"><figcaption>컴퓨터: 쏟아지는 창 닫기 (난이도 조정)</figcaption></figure>
     </div>
 
     <div class="cols">
@@ -102,7 +111,7 @@
         <ul>
           <li>텀블러 미션이 잘 안 보인다 → 텀블러 미니게임 추가</li>
           <li>창 닫기 게임이 너무 어렵다 → 난이도 조정</li>
-          <li>엔딩이 첫 화면과 비슷하다 → 나비가 문 밖 세상으로 나가는 엔딩</li>
+          <li>엔딩이 첫 화면과 비슷하다 → 나비가 우주로 날아가 지구 전체를 보여주는 엔딩</li>
         </ul>
       </div>
       <div>
@@ -121,11 +130,13 @@
   <div class="inner">
     <div class="label">02</div>
     <h2>Mon Aventure en France</h2>
-    <div class="info">프랑스어 학습 웹게임 · 2025.03– · 2인 팀 · 학회지 투고 준비 중</div>
+    <div class="info">프랑스어 학습 웹게임 · 2025.03–06 · 2인 팀 · 학회지 투고 준비 중</div>
 
-    <div class="shots">
-      <img src="images/mon_title.jpg" alt="시작 화면">
-      <img src="images/mon_character.jpg" alt="캐릭터 선택 화면">
+    <div class="shotgrid">
+      <figure><img src="images/mon_title.jpg" alt="시작 화면"><figcaption>시작 화면: 새로 시작과 불러오기(세이브·로드)</figcaption></figure>
+      <figure><img src="images/mon_character.jpg" alt="캐릭터 선택 화면"><figcaption>캐릭터 선택: 평가 후 추가한 기능</figcaption></figure>
+      <figure><img src="images/mon_quest.jpg" alt="숙소 선택 퀘스트"><figcaption>퀘스트: 조건에 맞는 숙소 고르기</figcaption></figure>
+      <figure><img src="images/mon_detail.jpg" alt="숙소 상세 정보"><figcaption>숙소 정보를 프랑스어로 읽고 판단하기</figcaption></figure>
     </div>
 
     <div class="cols">
@@ -142,7 +153,7 @@
       </div>
       <div>
         <h3>평가에서 개선까지</h3>
-        <p>전문가 6인 평가에서 자유도와 플레이 타임이 가장 낮았습니다. 선택권이 없는 구조가 원인이라고 보고 세이브·로드와 시나리오 모듈화를 기획했고, 전문가가 언급하지 않은 캐릭터 선택 기능도 더했습니다. (위 오른쪽 화면)</p>
+        <p>전문가 6인 평가에서 자유도와 플레이 타임이 가장 낮았습니다. 선택권이 없는 구조가 원인이라고 보고 세이브·로드와 시나리오 모듈화를 기획했고, 전문가가 언급하지 않은 캐릭터 선택 기능도 더했습니다.</p>
       </div>
       <div>
         <h3>결과</h3>
@@ -186,7 +197,8 @@
       </div>
       <div>
         <h3>결과</h3>
-        <p>구글 플레이 출시, 약 <b>8천</b> 회 다운로드</p>
+        <p>구글 플레이 출시, 약 <b>8천</b> 회 다운로드 (총 설치 7,570회, 2025년 1월 기준)</p>
+        <img class="evidence" src="images/peach_kpi.jpg" alt="구글 플레이 콘솔 총 설치 수">
       </div>
     </div>
 
