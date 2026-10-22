@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지현선 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', -apple-system, sans-serif; color: #1d1d1d; background: #fff; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  .inner { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  /* header */
+  .top { padding: 88px 0 72px; }
+  .top h1 { font-size: clamp(30px, 5vw, 40px); font-weight: 900; letter-spacing: -.02em; }
+  .top p { margin-top: 14px; font-size: 17px; color: #555; }
+  .top .links { margin-top: 18px; font-size: 14px; color: #888; }
+
+  /* shared section */
+  section { padding: 72px 0; }
+  .label { font-size: 13px; font-weight: 700; letter-spacing: .08em; opacity: .7; }
+  section h2 { font-size: clamp(28px, 4.5vw, 38px); font-weight: 900; letter-spacing: -.02em; line-height: 1.25; margin-top: 6px; }
+  .info { margin-top: 6px; font-size: 14px; opacity: .7; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; margin-top: 36px; }
+  .cols h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; opacity: .75; }
+  .cols p, .cols li { font-size: 15.5px; }
+  .cols ul { padding-left: 18px; }
+  .cols li + li { margin-top: 4px; }
+  .play { display: inline-block; margin-top: 36px; padding: 12px 26px; font-weight: 700; font-size: 15px; text-decoration: none; }
+  .small { display: block; margin-top: 10px; font-size: 13px; opacity: .65; }
+
+  /* 나비효과: 게임의 어두운 픽셀 방 */
+  .nabi { background: #15131b; color: #f3e9d2; }
+  .nabi .hero { margin-top: 32px; border-radius: 6px; overflow: hidden; }
+  .nabi .pair { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; margin-top: 12px; }
+  .nabi .pair img { border-radius: 6px; width: 100%; height: 100%; object-fit: cover; }
+  .nabi .play { background: #f2b544; color: #15131b; border-radius: 4px; }
+  .nabi q { color: #f2b544; }
+
+  /* Mon Aventure: 게임의 베이지 패널 */
+  .mon { background: #ecd5ae; color: #3b2f22; }
+  .mon .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+  .mon .shots img { border: 3px solid #4b4b4b; border-radius: 10px; }
+  .mon .play { background: #fff3da; color: #3b2f22; border: 3px solid #4b4b4b; border-radius: 10px; }
+
+  /* 복숭아 한국사: 게임의 복숭아빛 그라데이션 */
+  .peach { background: linear-gradient(180deg, #ff8f88, #ffad87); color: #fff; }
+  .peach .phones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; max-width: 640px; }
+  .peach .phones img { border-radius: 18px; box-shadow: 0 10px 24px rgba(160, 60, 50, .25); }
+  .peach .ended { display: inline-block; margin-top: 36px; padding: 10px 22px; border: 2px solid #fff; border-radius: 999px; font-weight: 700; font-size: 14px; }
+
+  footer { padding: 48px 0 64px; font-size: 14px; color: #888; }
+
+  @media (max-width: 680px) {
+    .top { padding: 56px 0 48px; }
+    section { padding: 56px 0; }
+    .cols, .nabi .pair, .mon .shots { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="inner">
+    <h1>지현선</h1>
+    <p>사람을 '하고 싶게' 만드는 설계를 고민합니다.<br>직접 기획하고 만들어 본 게임 세 개를 소개합니다.</p>
+    <div class="links"><a href="https://github.com/hyunsunny11" target="_blank" rel="noopener">github.com/hyunsunny11</a></div>
+  </div>
+</header>
+
+<!-- 나비효과 -->
+<section class="nabi">
+  <div class="inner">
+    <div class="label">01</div>
+    <h2>나비효과</h2>
+    <div class="info">환경교육 방탈출 웹게임 · 2026.03–06 · 5인 팀 · p5.js</div>
+
+    <img class="hero" src="images/nabi_title.jpg" alt="나비효과 타이틀 화면">
+    <div class="pair">
+      <img src="images/nabi_room.jpg" alt="게임 속 방 화면">
+      <img src="images/nabi_end.jpg" alt="엔딩 장면">
+    </div>
+
+    <div class="cols">
+      <div>
+        <h3>기획 의도</h3>
+        <p>빙하가 녹는 이야기는 다른 세상 이야기처럼 느껴집니다. 그래서 설거지, 분리수거처럼 매일 하는 행동 속에서 환경 문제의 원인과 결과를 플레이어가 직접 찾아내도록 방탈출 게임으로 만들었습니다.</p>
+      </div>
+      <div>
+        <h3>맡은 역할</h3>
+        <ul>
+          <li>게임 기획, 인터랙션 설계, 비주얼 개선</li>
+          <li>미니게임과 컷신 시스템 구현 (Claude 활용)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>플레이테스트 후 고친 것</h3>
+        <ul>
+          <li>텀블러 미션이 잘 안 보인다 → 텀블러 미니게임 추가</li>
+          <li>창 닫기 게임이 너무 어렵다 → 난이도 조정</li>
+          <li>엔딩이 첫 화면과 비슷하다 → 나비가 문 밖 세상으로 나가는 엔딩</li>
+        </ul>
+      </div>
+      <div>
+        <h3>플레이어 반응</h3>
+        <p><q>평소 지나쳤던 환경 문제를 다시 생각해 보게 됐다</q></p>
+      </div>
+    </div>
+
+    <a class="play" href="https://hyunsunny11.github.io/ButterflyEffect/" target="_blank" rel="noopener">플레이하기</a>
+    <span class="small">PC 브라우저에서 플레이해 주세요.</span>
+  </div>
+</section>
+
+<!-- Mon Aventure en France -->
+<section class="mon">
+  <div class="inner">
+    <div class="label">02</div>
+    <h2>Mon Aventure en France</h2>
+    <div class="info">프랑스어 학습 웹게임 · 2025.03– · 2인 팀 · 학회지 투고 준비 중</div>
+
+    <div class="shots">
+      <img src="images/mon_title.jpg" alt="시작 화면">
+      <img src="images/mon_character.jpg" alt="캐릭터 선택 화면">
+    </div>
+
+    <div class="cols">
+      <div>
+        <h3>기획 의도</h3>
+        <p>교재 속 표현을 길 찾기, 숙소 예약 같은 여행 속 과업으로 바꿔, 가상의 프랑스 여행을 하며 언어와 문화를 익히도록 설계했습니다.</p>
+      </div>
+      <div>
+        <h3>맡은 역할</h3>
+        <ul>
+          <li>전체 기획, 스크립트 제작과 검수</li>
+          <li>UI/UX 설계</li>
+        </ul>
+      </div>
+      <div>
+        <h3>평가에서 개선까지</h3>
+        <p>전문가 6인 평가에서 자유도와 플레이 타임이 가장 낮았습니다. 선택권이 없는 구조가 원인이라고 보고 세이브·로드와 시나리오 모듈화를 기획했고, 전문가가 언급하지 않은 캐릭터 선택 기능도 더했습니다. (위 오른쪽 화면)</p>
+      </div>
+      <div>
+        <h3>결과</h3>
+        <p>학습자 27명 평가에서 사용자 경험 영역 <b>4.48점</b>으로 가장 높은 점수를 받았습니다.</p>
+      </div>
+    </div>
+
+    <a class="play" href="https://monnomshj.github.io/MonAventureEnFrance_1.1/" target="_blank" rel="noopener">플레이하기</a>
+    <span class="small">프랑스어 학습용 게임이라 게임 속 대사는 프랑스어입니다.</span>
+  </div>
+</section>
+
+<!-- 복숭아 한국사 -->
+<section class="peach">
+  <div class="inner">
+    <div class="label">03</div>
+    <h2>복숭아 한국사</h2>
+    <div class="info">한국사 퀴즈 모바일 게임 · 2022.01–04 · 2인 팀</div>
+
+    <div class="phones">
+      <img src="images/peach_title.jpg" alt="타이틀 화면">
+      <img src="images/peach_lobby.jpg" alt="모드 선택 화면">
+      <img src="images/peach_quiz.jpg" alt="퀴즈 화면">
+    </div>
+
+    <div class="cols">
+      <div>
+        <h3>출발한 질문</h3>
+        <p>사람들은 왜 역사 예능은 재밌어하면서 수업은 지루해할까?</p>
+      </div>
+      <div>
+        <h3>맡은 역할</h3>
+        <ul>
+          <li>전체 기획, 퀴즈 문항 출제</li>
+          <li>UI/UX 설계</li>
+        </ul>
+      </div>
+      <div>
+        <h3>설계</h3>
+        <p>인물을 둘러싼 이야기를 먼저 들려준 뒤 그 인물을 맞히게 했습니다. 오른쪽 화면처럼 비담의 난 이야기를 읽고 비담을 찾는 식입니다.</p>
+      </div>
+      <div>
+        <h3>결과</h3>
+        <p>구글 플레이 출시, 약 <b>8천</b> 회 다운로드</p>
+      </div>
+    </div>
+
+    <span class="ended">현재 서비스 종료</span>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">지현선 · github.com/hyunsunny11</div>
+</footer>
+
+</body>
+</html>
